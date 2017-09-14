@@ -1,154 +1,18 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!doctype html>
 <html>
-<head>
-<title>hi guys</title>
-<meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
-<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/w3.css" />
-<!-- <link rel="stylesheet" -->
-<!-- 	href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"> -->
-<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-</head>
-<body>
-	<!-- modal -->
-
-	<div class="modal-frame">
-		<div class="modal ">
-			<div class="modal-inset ">
-				<div class="modal-body ">
-					<!-- 					<div class=" close-pop"> -->
-					<!-- 						<i class="fa fa-close"></i> -->
-					<!-- 					</div> -->
-					<!-- 					<h3>Soemthing</h3> -->
-
-					<input type="text" placeholder="username" name="user"><br>
-					<input type="password" placeholder="password" name="password">
-
-
-				</div>
-				<br>
-				<br> <input type="button" value="sign in" style="	color : rgba(255,255,255,0.8) !important;" class="signin">
-				<input type="button" value="are you new ?" class="signup"  style="	color : rgba(255,255,255,0.8) !important;" >
-
-			</div>
-
+    <head>
+        <meta charset="UTF-8" />
+        <title>MOSS - Treasure Hunt Game</title>
+        <link rel="stylesheet" type="text/css" href="css/moss.css">
+    </head>
+    <body>
+		<div id="bg">
+		  <img src="images/background.jpg" alt="">
 		</div>
-
-	</div>
-	<div class="modal-overlay"></div>
-	<!-- modal -->
-
-
-	<!-- Navigation -->
-	<div class="open">
-		<span class="cls"></span> <span>
-			<ul class="sub-menu ">
-				<li><a href="#"><i
-						class="fa fa-user fa-2x fa-border open-pop"></i></a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="gallery.html">gallery</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-		</span> <span class="cls"></span>
-	</div>
-
-	<!-- Header -->
-	<header id="header">
-		<h1 style="color: rgba(81, 225, 206, 0.6)">
-			<i class="fa fa-quote-left  fa-pull-left " aria-hidden="true"></i>HOPE
-			FOR PAWS
-		</h1>
-		<p style="color: rgba(81, 225, 206, 0.6)">this is a site where ppl
-			come toghethr ro save some paws</p>
-	</header>
-
-	<!-- Signup Form -->
-	<!-- 			<form id="signup-form" method="post" action="#"> -->
-	<!-- 				<input type="email" name="email" id="email" placeholder="Email Address" /> -->
-	<!-- 				<input type="submit" value="Sign Up" /> -->
-	<!-- 			</form> -->
-
-	<!-- Footer -->
-	<!-- 			<footer id="footer"> -->
-	<!-- 				<ul class="icons"> -->
-	<!-- 					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
-	<!-- 					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> -->
-	<!-- 					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li> -->
-	<!-- 					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li> -->
-	<!-- 				</ul> -->
-	<!-- 				<ul class="copyright"> -->
-	<!-- 					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li> -->
-	<!-- 				</ul> -->
-	<!-- 			</footer> -->
-
-	<!-- Scripts -->
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script
-		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<!-- for modal -->
-	<script>
-		$(document)
-				.on(
-						'ready',
-						function() {
-							$modal = $('.modal-frame');
-							$overlay = $('.modal-overlay');
-
-							/* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
-							$modal
-									.bind(
-											'webkitAnimationEnd oanimationend msAnimationEnd animationend',
-											function(e) {
-												if ($modal
-														.hasClass('state-leave')) {
-													$modal
-															.removeClass('state-leave');
-												}
-											});
-
-							$('.modal').on('click', function(event) {
-								// 				this is done to prevent pop up close on body clicks
-								event.stopPropagation();
-							});
-
-							$modal.on('click', function() {
-								$overlay.removeClass('state-show');
-								$modal.removeClass('state-appear').addClass(
-										'state-leave');
-							});
-
-							//in case you need a button use below
-							// 							$('.close-pop').on(
-							// 									'click',
-							// 									function() {
-							// 										$overlay.removeClass('state-show');
-							// 										$modal.removeClass('state-appear')
-							// 												.addClass('state-leave');
-							// 									});
-
-							$('.open-pop').on(
-									'click',
-									function() {
-										$overlay.addClass('state-show');
-										$modal.removeClass('state-leave')
-												.addClass('state-appear');
-									});
-
-						});
-	</script>
-
-</body>
+		
+		<div id="enter" class="enter_game">
+			<h1>MOSS - Treasure Hunt Game</h1>
+			<p><a href="game.html">Enter</a></p>
+		</div>
+    </body>
 </html>

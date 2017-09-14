@@ -1,0 +1,72 @@
+
+@import url("https://fonts.googleapis.com/css?family=Righteous|Montserrat");
+BODY 
+{
+  background: rgb(51,51,51);
+    font-family: "Righteous", cursive;
+}
+.center
+{
+  width: 450px;
+  margin: auto;
+  margin-top: 5px;
+}
+.board
+{
+	width: 450px;
+	height:400px;
+	position:relative;
+}
+
+.hexagonContainer
+{
+position:absolute;	
+}
+.hexagon {
+width: 100px;
+height: 116px;
+overflow: hidden;
+visibility: hidden;
+transform: rotate(120deg);
+
+}
+.hexagon-in1 {
+overflow: hidden;
+width: 100%;
+height: 100%;
+transform: rotate(-60deg);
+
+}
+.hexagon-in2 {
+width: 100%;
+height: 100%;
+visibility: visible;
+transform: rotate(-60deg);
+background:url('http://lorempixel.com/450/378/people/');
+background-repeat: no-repeat;
+background-position: 0px 0px;
+background-color:rgb(34,34,34);
+
+}
+
+.hexagon-in2:hover {
+opacity:0.5;
+} 
+.buttons{
+	position:relative;
+	text-align:center;
+}
+button{
+	border-radius: 4px;
+	background: rgb(68,68,68);
+	color:  rgb(255,255,255);
+	border-width:1px;
+	
+	font-size: 1em;
+	padding: 10px 10px;
+	font-family: helvetica, arial, sans-serif;
+	text-transform:uppercase;
+	margin:5px;
+  	
+}
+    
