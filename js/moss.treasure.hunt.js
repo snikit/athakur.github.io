@@ -49,9 +49,9 @@ function create() {
     layer.resizeWorld();
 
 	//Campos de Texto: pontuação e tempo gasto
-	scoreText = game.add.text(16, 16, 'Score: 0', { font: "22px Arial", fill: "#ffffff", align: "left" });
-	scoreText.fixedToCamera = true;
-	timeText = game.add.text(660, 16, 'Time:  0s', { font: "20px Arial", fill: "#ffffff", align: "left" });
+//	scoreText = game.add.text(16, 16, 'Score: 0', { font: "22px Arial", fill: "#ffffff", align: "left" });
+//	scoreText.fixedToCamera = true;
+	timeText = game.add.text(660, 16, '0s', { font: "20px Arial", fill: "#ffffff", align: "left" });
 	timeText.fixedToCamera = true;
 		
 		
@@ -108,7 +108,7 @@ function update() {
 	if (gameMode == 1) {
 		//tempo gasto
 		timeElapsed = (game.time.elapsedSince(gameStart)/1000).toFixed(2);
-		timeText.content = 'Time: ' + timeElapsed + 's';
+		timeText.content = '' + timeElapsed + 's';
 		
 		//teclas
 		if (cursors.left.isDown)
@@ -150,7 +150,19 @@ function update() {
 		}
 	//gameOver
 	}else if (gameMode == 2){
-		gameOverText.content = 'Congratulations!\n fucker \n in ' + timeElapsed + 's';
+		
+		if(timeElapsed < 20)
+		{
+			alert("Congo Baby , You have collected all of my hearts in time ;)")
+	
+		}
+		else
+		{
+			alert("Oops ! you gotta try again , move like a gamer baby , you are my girl :p")	
+			window.location.reload();
+		}
+			
+		gameOverText.content = ' ';
 		//Fim
 		gameMode=3;
 	} 
@@ -162,7 +174,7 @@ function collectMOSS (player, star) {
 	star.kill();
 	//incrementa pontuação
 	score += 10;
-	scoreText.content = 'Score: ' + score;
+//	scoreText.content = 'Score: ' + score;
 	
 		if (score == 100) {
 			gameOver();
