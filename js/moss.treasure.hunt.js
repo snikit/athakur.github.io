@@ -150,7 +150,7 @@ function update() {
 		}
 	//gameOver
 	}else if (gameMode == 2){
-		gameOverText.content = 'Congratulations!\nYou Mastered MOSS\n in ' + timeElapsed + 's';
+		gameOverText.content = 'Congratulations!\n fucker \n in ' + timeElapsed + 's';
 		//Fim
 		gameMode=3;
 	} 
