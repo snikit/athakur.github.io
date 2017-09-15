@@ -1,5 +1,19 @@
 function dothis(){
-	alert("sup babe!")
+	  var res = confirm("hi babe! ready for your b'day present ?");
+	if(res){
+		alert("not that fast :p");
+		var prom =prompt("tell me first ! whats the best nick name that I gave you ?")
+		if(prom=='thullu' || prom=='bilo'){
+			alert("ypp thullu :p");
+			window.location.href="letter.html";
+		}
+	}
+	
+// if (person != null) {
+// document.getElementById("demo").innerHTML =
+// "Hello " + person + "! How are you today?";
+// }
+
 }
 
 var a = document.getElementById('supers').style.display="none";
@@ -82,15 +96,15 @@ function initTimer (t) {
 
    function updateTimer() {
 
-//	   var d1 = new Date("09/16/2017");
-//	   var d2 = new Date();
+	   var d1 = new Date("09/16/2017");
+	   var d2 = new Date();
 	   
 	    
-//	   if(d1.getTime()-d2.getTime() < 0)
-//		   {
-//		   var a = document.getElementById('timers').style.display="none";
-//		   var a = document.getElementById('supers').style.display="";
-//		   }
+	   if(d1.getTime()-d2.getTime() < 0)
+		   {
+		   var a = document.getElementById('timers').style.display="none";
+		   var a = document.getElementById('supers').style.display="";
+		   }
 		   
       var timestr;
       var date = new Date();

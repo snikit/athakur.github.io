@@ -46,7 +46,9 @@
 					, I won't even charge you :p <br>I am sorry about that day,
 					remember when you got really angry . I didn't meant it that way ,
 					you know that right ?<br> <br> <b>Babe I know forever
-						is a long time , but I would love spending it with you :*<b>
+						is a long time , but I would love spending it with you :*<b><br>
+							<br> <a href="#canvas" onclick="dothis()">you wanna see
+								some of our memories ?</a>
 				</p>
 
 
@@ -57,6 +59,33 @@
 	</div>
 	<canvas id="canvas">Canvas is not supported in your browser</canvas>
 	<script>
+	var first=true;
+	var test=false;
+	
+	
+	function more(){
+		alert("keep enjoying the fire work then :p when ready click that link again !");
+	}
+	
+	function dothis(){
+		if(first)
+		alert("did you tried clickin on the below fireworks area ? you can control those firworks with mouse clicks thulle :p")
+
+		
+		
+		
+		if(!first){
+			test=confirm("done with that ? not amazed at the animation ? fk u !! wanna try something else")
+			if(!test){
+			more();
+			}else{
+			window.location.href="hunt.html";
+			}
+		}
+		first=false;
+
+		
+	}
 
 //when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
 //not supported in all browsers though and sometimes needs a prefix, so we need a shim

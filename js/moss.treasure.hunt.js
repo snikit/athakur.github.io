@@ -153,7 +153,8 @@ function update() {
 		
 		if(timeElapsed < 20)
 		{
-			alert("Congo Baby , You have collected all of my hearts in time ;)")
+			alert("Congo Baby , You have collected all of my hearts in time :*")
+			window.location.href="mem.html";
 	
 		}
 		else
