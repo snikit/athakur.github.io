@@ -1,15 +1,21 @@
+function dothis(){
+	alert("sup babe!")
+}
+
+var a = document.getElementById('supers').style.display="none";
+
 function parseMillisecondsIntoReadableTime(milliseconds){
-  //Get hours from milliseconds
+  // Get hours from milliseconds
   var hours = milliseconds / (1000*60*60);
   var absoluteHours = Math.floor(hours);
   var h = absoluteHours > 9 ? absoluteHours : '0' + absoluteHours;
 
-  //Get remainder from hours and convert to minutes
+  // Get remainder from hours and convert to minutes
   var minutes = (hours - absoluteHours) * 60;
   var absoluteMinutes = Math.floor(minutes);
   var m = absoluteMinutes > 9 ? absoluteMinutes : '0' +  absoluteMinutes;
 
-  //Get remainder from minutes and convert to seconds
+  // Get remainder from minutes and convert to seconds
   var seconds = (minutes - absoluteMinutes) * 60;
   var absoluteSeconds = Math.floor(seconds);
   var s = absoluteSeconds > 9 ? absoluteSeconds : '0' + absoluteSeconds;
@@ -31,9 +37,14 @@ var d2 = new Date();
 
 TweenLite.defaultEase = Expo.easeOut;
 
-console.log(parseMillisecondsIntoReadableTime(d1.getTime()-d2.getTime()));
+// console.log(parseMillisecondsIntoReadableTime(d1.getTime()-d2.getTime()));
 
-initTimer(parseMillisecondsIntoReadableTime(d1.getTime()-d2.getTime())); // other ways --> "0:15" "03:5" "5:2"
+initTimer(parseMillisecondsIntoReadableTime(d1.getTime()-d2.getTime())); // other
+																			// ways
+																			// -->
+																			// "0:15"
+																			// "03:5"
+																			// "5:2"
 
 var reloadBtn = document.querySelector('.reload');
 var timerEl = document.querySelector('.timer');
@@ -71,6 +82,16 @@ function initTimer (t) {
 
    function updateTimer() {
 
+	   var d1 = new Date("09/15/2017 11:21");
+	   var d2 = new Date();
+	   
+	    
+	   if(d1.getTime()-d2.getTime() < 0)
+		   {
+		   var a = document.getElementById('timers').style.display="none";
+		   var a = document.getElementById('supers').style.display="";
+		   }
+		   
       var timestr;
       var date = new Date();
 
@@ -159,7 +180,8 @@ reloadBtn.addEventListener('click', function () {
 			$.translate(w/2, h/2);
 			$.rotate(e.a);
 			$.arc(e.r,e.r,1,0,Math.PI*2);
-			//$.arc(Math.cos(e.a)*e.r + w/2, Math.sin(e.a)*e.r + h/2,1,0,Math.PI*2);
+			// $.arc(Math.cos(e.a)*e.r + w/2, Math.sin(e.a)*e.r +
+			// h/2,1,0,Math.PI*2);
 			$.closePath();
 			$.fillStyle = "white";
 			$.fill();
