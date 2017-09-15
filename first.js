@@ -82,15 +82,15 @@ function initTimer (t) {
 
    function updateTimer() {
 
-	   var d1 = new Date("09/15/2017 11:21");
-	   var d2 = new Date();
+//	   var d1 = new Date("09/16/2017");
+//	   var d2 = new Date();
 	   
 	    
-	   if(d1.getTime()-d2.getTime() < 0)
-		   {
-		   var a = document.getElementById('timers').style.display="none";
-		   var a = document.getElementById('supers').style.display="";
-		   }
+//	   if(d1.getTime()-d2.getTime() < 0)
+//		   {
+//		   var a = document.getElementById('timers').style.display="none";
+//		   var a = document.getElementById('supers').style.display="";
+//		   }
 		   
       var timestr;
       var date = new Date();
