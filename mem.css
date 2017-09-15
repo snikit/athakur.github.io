@@ -220,7 +220,7 @@ body {
   height: 100vh;
   margin-left: -50vw;
   margin-top: -50vh;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
 }
 .slide__inner:before {
