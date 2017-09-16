@@ -151,7 +151,7 @@ function update() {
 	//gameOver
 	}else if (gameMode == 2){
 		
-		if(timeElapsed < 20)
+		if(timeElapsed < 50)
 		{
 			alert("Congo Baby , You have collected all of my hearts in time :*")
 			window.location.href="mem.html";
